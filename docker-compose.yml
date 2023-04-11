@@ -8,7 +8,7 @@ services:
       target: jupyter-notebook
     container_name: spark-jupyter
     volumes:
-      - ./data:/opt/data
+      - ./data:/opt/spark/data
       - ./notebooks:/opt/notebooks
       - ./spark-logs:/opt/spark/spark-events
     ports:
