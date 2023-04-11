@@ -7,9 +7,9 @@ class MonetaryCorrection:
 
         self.ipca_data = pd.read_csv("https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=csv", sep=";")
         self.ipca_data["valor"] = self.ipca_data.valor.str.replace(",", ".").astype(float)
-        self.ipca_data['data'] = pd.to_datetime(self.ipca_data['data'], format="%d/%m/%Y") 
+    
             
-    def ipca(self, value, date_start, date_end=False)->(float, float):
+    def ipca(self, value, date_start, date_end=False):
         """
         >>> corretor.ipca(100, "07/2019", "02/2023")
         (125.87, 25.86683)
@@ -19,8 +19,7 @@ class MonetaryCorrection:
         
         >>> corretor.ipca(231.24, "1/2002", "2/2023")
         (837.26, 262.07534)
-        
-        
+               
         """
         
         ipca = self.ipca_data[self.ipca_data["data"] >= pd.Timestamp(date_start)].copy()
