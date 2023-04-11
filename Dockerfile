@@ -58,10 +58,9 @@ RUN chmod u+x /opt/spark/sbin/* && \
 ENV PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 
 # Copy appropriate entrypoint script
-COPY entrypoint.sh .
-
+COPY entrypoint.sh . 
 ENTRYPOINT ["./entrypoint.sh"]
-
+RUN chmod +x ./entrypoint.sh
 
 
 FROM pyspark-base as jupyter-notebook
