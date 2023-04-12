@@ -8,6 +8,7 @@ class MonetaryCorrection:
         ipca_data["taxa"] = ipca_data["valor"]/100 + 1     
         ipca_data["data"] = ipca_data["data"].str[3:]
         ipca_data['correction_index'] = ipca_data.taxa.cumprod()
+        self.ipca_data = ipca_data
 
         self.ipca_data_dict = { data: value for data,value in ipca_data[["data", "correction_index"]].values }
 
