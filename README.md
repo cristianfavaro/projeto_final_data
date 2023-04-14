@@ -1,7 +1,7 @@
 # Projeto Final 
 ## Master em Jornalismo de Dados - Insper
 
-Trabalho apresentado na conclusão do bloco Jornalismo de Dados e Automação dentro do Master em Jornalismo de Dados do Insper em 2023. O projeto foi ministrado pelo professor Eduardo Vicente Gonçalves.  
+Trabalho apresentado na conclusão do módulo Jornalismo de Dados e Automação do Master em Jornalismo de Dados do Insper - turma 2022/23. O projeto foi ministrado pelo professor Eduardo Vicente Gonçalves.  
 
 ### O Projeto
 
