@@ -32,7 +32,7 @@ A base completa - janeiro de 2002 a dezembro de 2022 - tem mais de 55 milhões d
 
 Para cruzar os dados, resolvi usar o Pyspark - interface Python para Spark e é um projeto Apache de plataforma cruzada de código aberto. 
 
-Por uma questão de capacidade de processamento, parte do tratamento dos dados foi feita fora do Spark com o Pandas. 
+Mas, por uma questão de capacidade de processamento, parte do tratamento dos arquivos foi feita individualmente via Pandas. Após isso, os dados são facilmente agrupados e agregados no Spark. 
 
 #### Docker
 O Spark é bastante simples de ser iniciado via Docker, método escolhido para este projeto. 
