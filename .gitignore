@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+data/*
+/docker-compose.generated.yml
+anac.nosync/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+__pycache__/
