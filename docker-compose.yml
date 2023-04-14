@@ -8,9 +8,8 @@ services:
       target: jupyter-notebook
     container_name: spark-jupyter
     volumes:
-      - ./data:/opt/spark/data
-      - ./notebooks:/opt/notebooks
       - ./spark-logs:/opt/spark/spark-events
+      - ./notebooks:/opt/notebooks
     ports:
       - '8888:8888'
       - '4040:4040'
@@ -28,8 +27,6 @@ services:
       timeout: 3s
       retries: 3
     volumes:
-      - ./data:/opt/spark/data
-      - ./spark_apps:/opt/spark/apps
       - ./spark-logs:/opt/spark/spark-events
       - ./notebooks:/opt/notebooks
     env_file:
@@ -37,7 +34,6 @@ services:
     ports:
       - '9090:8080'
       - '7077:7077'
-
 
   spark-history-server:
     container_name: spark-history
@@ -61,8 +57,6 @@ services:
     env_file:
       - .env.spark
     volumes:
-      - ./data:/opt/spark/data
-      - ./spark_apps:/opt/spark/apps
       - ./spark-logs:/opt/spark/spark-events
       - ./notebooks:/opt/notebooks
     ports:

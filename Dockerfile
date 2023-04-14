@@ -35,7 +35,7 @@ RUN curl https://dlcdn.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VER
 FROM spark-base as pyspark-base
 
 # Install python deps
-COPY requirements/requirements.txt .
+COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 
